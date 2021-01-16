@@ -1,0 +1,11 @@
+@font-face {
+    font-family: EAN13;
+    src: url(../fonts/ean13.woff2) format('woff2'),
+         url(../fonts/ean13.woff) format('woff'),
+         url(../fonts/ean13.otf) format('opentype'),
+         url(../fonts/ean13.ttf) format('truetype');
+}
+
+.f-ean13 {
+    font-family: EAN13;
+}

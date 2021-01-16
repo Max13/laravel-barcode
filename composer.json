@@ -1,0 +1,65 @@
+{
+    "name": "max13/laravel-barcode",
+    "description": "Laravel package to manage and generate barcodes",
+    "keywords": [
+        "max13",
+        "barcode"
+    ],
+    "homepage": "https://github.com/max13/laravel-barcode",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adnan RIHAN",
+            "email": "adnan@rihan.fr",
+            "homepage": "https://adnan.rihan.fr/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^7.4|^8.0",
+        "illuminate/contracts": "^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Max13\\Barcode\\": "src/Max13/Barcode"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Max13\\Barcode\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Barcode": "Max13\\Barcode\\Barcode"
+            },
+            "providers": [
+                "Max13\\Barcode\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/max13"
+        },
+        {
+            "type": "other",
+            "url": "https://adnan.rihan.fr/"
+        }
+    ]
+}
