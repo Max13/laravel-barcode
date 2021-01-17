@@ -18,13 +18,13 @@ This package embeds corresponding fonts to write the barcode on a webpage. You w
 
 ## Configuration
 
-`Barcode` types are available like so:
+`Barcode` types are available like so (defaults to `ean13`):
 
 | type | has font |
 | --- | --- |
 | ean13 | yes |
 
-To set the barcode type used, set to your `.env` file: `BARCODE_TYPE=` with the barcode type you want to use.
+To change the barcode type used, set to your `.env` file: `BARCODE_TYPE=` with the barcode type you want to use.
 
 When a barcode has a font and you would use it, you need to publish the package assets using:
 
