@@ -19,6 +19,8 @@ class Manager extends BaseManager
     /** {@inheritDoc} */
     public function getDefaultDriver()
     {
-        return $this->config->get('barcode.driver', 'ean13');
+        $default = $this->config->get('barcode.default', 'ean13');
+
+        return $this->config->get("barcode.types.$default.driver");
     }
 }
