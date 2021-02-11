@@ -3,7 +3,6 @@
 namespace Max13\Barcode\Tests;
 
 use Max13\Barcode\Ean13;
-use Max13\Barcode\Facades\Barcode;
 use Max13\Barcode\Exceptions\InvalidLengthException;
 use Max13\Barcode\Manager;
 
