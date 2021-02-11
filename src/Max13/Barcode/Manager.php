@@ -7,6 +7,16 @@ use Illuminate\Support\Manager as BaseManager;
 class Manager extends BaseManager
 {
     /**
+     * Create en Ean8 driver
+     *
+     * @return \Max13\Barcode\Ean8
+     */
+    protected function createEan8Driver()
+    {
+        return new Ean8;
+    }
+
+    /**
      * Create en Ean13 driver
      *
      * @return \Max13\Barcode\Ean13

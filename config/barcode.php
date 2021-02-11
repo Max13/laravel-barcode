@@ -18,6 +18,10 @@ return [
 
     'types' => [
 
+        'ean8' => [
+            'driver' => 'ean8',
+        ],
+
         'ean13' => [
             'driver' => 'ean13',
         ],
