@@ -18,12 +18,7 @@ class ServiceProvider extends BaseProvider
         );
 
         $this->app->singleton('barcode', function ($app) {
-            $type = $app['config']->get('barcode.default');
-            $config = $app['config']->get("barcode.types.$type");
-
-            $barcodeClass = __NAMESPACE__ . '\\' . ucfirst($config['driver']);
-
-            return new $barcodeClass($config);
+            return new Manager($app);
         });
     }
 
