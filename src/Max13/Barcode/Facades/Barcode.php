@@ -1,6 +1,6 @@
 <?php
 
-namespace Max13\Barcode;
+namespace Max13\Barcode\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
