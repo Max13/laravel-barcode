@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "aliases": {
-                "Barcode": "Max13\\Barcode\\Barcode"
+                "Barcode": "Max13\\Barcode\\Facades\\Barcode"
             },
             "providers": [
                 "Max13\\Barcode\\ServiceProvider"
