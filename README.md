@@ -22,6 +22,7 @@ This package embeds corresponding fonts to write the barcode on a webpage. You w
 
 | type | has font |
 | --- | --- |
+| ean8 | yes |
 | ean13 | yes |
 
 To change the barcode type used, set to your `.env` file: `BARCODE_TYPE=` with the barcode type you want to use.
