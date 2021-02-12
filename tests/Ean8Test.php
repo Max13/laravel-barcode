@@ -70,7 +70,7 @@ class Ean8Test extends TestCase
     {
         $this->expectException(InvalidLengthException::class);
         $this->expectExceptionMessage(
-            'The barcode must be 7 or 8 characters long'
+            'The barcode must be either of [7,8] characters long'
         );
 
         $this->app['barcode']->fix('123');
@@ -80,7 +80,7 @@ class Ean8Test extends TestCase
     {
         $this->expectException(InvalidLengthException::class);
         $this->expectExceptionMessage(
-            'The barcode must be 7 or 8 characters long'
+            'The barcode must be either of [7,8] characters long'
         );
 
         $this->app['barcode']->fix('12345678910123');

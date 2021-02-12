@@ -85,7 +85,7 @@ class Ean13Test extends TestCase
     {
         $this->expectException(InvalidLengthException::class);
         $this->expectExceptionMessage(
-            'The barcode must be 12 or 13 characters long'
+            'The barcode must be either of [12,13] characters long'
         );
 
         $this->app['barcode']->fix('123');
@@ -95,7 +95,7 @@ class Ean13Test extends TestCase
     {
         $this->expectException(InvalidLengthException::class);
         $this->expectExceptionMessage(
-            'The barcode must be 12 or 13 characters long'
+            'The barcode must be either of [12,13] characters long'
         );
 
         $this->app['barcode']->fix('12345678910123');
