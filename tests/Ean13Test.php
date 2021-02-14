@@ -68,8 +68,8 @@ class Ean13Test extends TestCase
             $this->app['barcode']->checksum('445027632564')
         );
         $this->assertEquals(
-            '9',
-            $this->app['barcode']->checksum('478650601501')
+            '0',
+            $this->app['barcode']->checksum('478650601504')
         );
     }
 
@@ -152,7 +152,7 @@ class Ean13Test extends TestCase
         $this->assertTrue($this->app['barcode']->isValid('3731515819005'));
         $this->assertTrue($this->app['barcode']->isValid('3160584741649'));
         $this->assertTrue($this->app['barcode']->isValid('4450276325646'));
-        $this->assertTrue($this->app['barcode']->isValid('4786506015019'));
+        $this->assertTrue($this->app['barcode']->isValid('4786506015040'));
     }
 
     public function testIsValidReturnsFalseForInvalidBarcodes()
@@ -161,7 +161,7 @@ class Ean13Test extends TestCase
         $this->assertFalse($this->app['barcode']->isValid('3731515819000'));
         $this->assertFalse($this->app['barcode']->isValid('3160584741640'));
         $this->assertFalse($this->app['barcode']->isValid('4450276325640'));
-        $this->assertFalse($this->app['barcode']->isValid('4786506015010'));
+        $this->assertFalse($this->app['barcode']->isValid('4786506015049'));
     }
 
     public function testEncodeThrowsExceptionForNotStringArgument()
@@ -207,8 +207,8 @@ class Ean13Test extends TestCase
             $this->app['barcode']->encode('4450276325646')
         );
         $this->assertEquals(
-            '4HSGFKQ*abfabj+',
-            $this->app['barcode']->encode('4786506015019')
+            '4HSGFKQ*abfaea+',
+            $this->app['barcode']->encode('4786506015040')
         );
     }
 }

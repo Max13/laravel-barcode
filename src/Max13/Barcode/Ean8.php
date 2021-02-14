@@ -22,7 +22,7 @@ class Ean8 extends Ean
             $checksum += intval($barcode[$i]) * ($i % 2 ? 1 : 3);
         }
 
-        return strval(10 - $checksum % 10);
+        return strval(10 - ($checksum % 10 ?: 10));
     }
 
     /** {@inheritDoc} */
